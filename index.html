@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HandOffTA | Practical AI Tools for Hiring Teams</title>
+  <meta name="description" content="HandOffTA: a recruiting and talent acquisition leader building practical AI and automation tools for hiring teams.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #0E9C8F;
+      --accent-soft: #e6f5f3;
+      --border: #e5e7eb;
+      --bg: #ffffff;
+      --bg-alt: #f8faf9;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 72px 0; }
+    section.alt { background: var(--bg-alt); }
+    h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 8px; }
+    .section-lead { color: var(--muted); margin-bottom: 32px; max-width: 640px; }
+    .eyebrow {
+      display: inline-block; font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
+    }
+
+    /* Nav */
+    nav { border-bottom: 1px solid var(--border); }
+    nav .container { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+    .logo { font-weight: 800; font-size: 1.15rem; color: var(--text); }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: var(--text); font-weight: 500; font-size: 0.95rem; }
+    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+    /* Hero */
+    .hero { padding: 96px 0 80px; }
+    .hero h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 20px; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { font-size: 1.2rem; color: var(--muted); max-width: 640px; margin-bottom: 32px; }
+    .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 12px 22px; border-radius: 8px;
+      font-weight: 600; font-size: 0.95rem; border: 2px solid var(--accent);
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-secondary { background: transparent; color: var(--accent); }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+
+    /* About */
+    .about p { font-size: 1.1rem; max-width: 760px; margin-bottom: 16px; }
+
+    /* Tools */
+    .tool-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .tool-group {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px;
+    }
+    .tool-group h3 { font-size: 1rem; font-weight: 700; margin-bottom: 16px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      background: var(--accent-soft); color: #0a7168; font-size: 0.85rem; font-weight: 500;
+      padding: 6px 12px; border-radius: 999px;
+    }
+
+    /* Projects */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .card {
+      display: flex; flex-direction: column; border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px; background: var(--bg);
+    }
+    .card:hover { border-color: var(--accent); }
+    .card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; flex-grow: 1; }
+    .badge {
+      display: inline-block; align-self: flex-start; font-size: 0.78rem; font-weight: 600;
+      color: var(--text); background: var(--bg-alt); border: 1px solid var(--border);
+      padding: 4px 10px; border-radius: 6px; margin-bottom: 16px;
+    }
+    .card-link { font-weight: 600; font-size: 0.9rem; }
+
+    /* Footer */
+    footer { background: var(--text); color: #f1f1f1; padding: 64px 0 32px; }
+    footer h2 { color: #fff; }
+    footer .section-lead { color: #bdbdbd; }
+    .contact-list { list-style: none; display: flex; flex-wrap: wrap; gap: 16px 40px; margin-bottom: 48px; }
+    .contact-list li { font-size: 1.05rem; }
+    .contact-list .label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #9a9a9a; }
+    footer a { color: #4fd1c5; }
+    .copyright { border-top: 1px solid #333; padding-top: 24px; font-size: 0.85rem; color: #9a9a9a; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      section { padding: 56px 0; }
+      .hero { padding: 64px 0 56px; }
+      .hero p { font-size: 1.05rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">HandOff<span>TA</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Recruiting × AI × Automation</span>
+      <h1>Practical AI tools<br>for <span>hiring teams.</span></h1>
+      <p>I'm HandOffTA, a talent acquisition leader who builds the tools recruiters and hiring managers actually need. Less busywork. Better hiring.</p>
+      <div class="btn-row">
+        <a href="#projects" class="btn btn-primary">See the Projects</a>
+        <a href="https://github.com/HandOffTA" class="btn btn-secondary">GitHub Profile</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="about alt">
+    <div class="container">
+      <span class="eyebrow">About</span>
+      <h2>Built from inside the hiring process</h2>
+      <p>I've spent my career in recruiting and talent acquisition: sourcing, screening, closing, and fixing the parts of the process that slow teams down.</p>
+      <p>Now I build focused AI and automation tools that take repetitive, inconsistent work off recruiters' plates. Each one solves a real problem I've seen on the job, and each one is built to be used this week, not next quarter.</p>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="container">
+      <span class="eyebrow">Toolkit</span>
+      <h2>What I build with</h2>
+      <p class="section-lead">The right tool for the job: LLMs for judgment-heavy work, automation for the repeatable stuff, and analytics to see what's working.</p>
+      <div class="tool-groups">
+        <div class="tool-group">
+          <h3>AI / LLMs</h3>
+          <div class="chips">
+            <span class="chip">Claude API</span>
+            <span class="chip">Claude Code</span>
+            <span class="chip">Claude Skills</span>
+            <span class="chip">Abacus</span>
+            <span class="chip">LM Studio</span>
+          </div>
+        </div>
+        <div class="tool-group">
+          <h3>Automation</h3>
+          <div class="chips">
+            <span class="chip">Zapier</span>
+            <span class="chip">Google Apps Script</span>
+            <span class="chip">Webhooks &amp; API Integrations</span>
+          </div>
+        </div>
+        <div class="tool-group">
+          <h3>Build &amp; Analytics</h3>
+          <div class="chips">
+            <span class="chip">Lovable</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Looker</span>
+            <span class="chip">Power BI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="alt">
+    <div class="container">
+      <span class="eyebrow">Projects</span>
+      <h2>Featured work</h2>
+      <p class="section-lead">Ten tools covering the full hiring cycle, from intake and sourcing to interviews, offers, and reporting.</p>
+      <div class="projects-grid">
+        <article class="card">
+          <h3>Boolean String Builder</h3>
+          <p>Paste a job description and get LinkedIn, Google X-ray, and GitHub search strings.</p>
+          <span class="badge">Claude API · Claude Skill</span>
+          <a class="card-link" href="https://github.com/HandOffTA/boolean-string-builder">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Comp Range Sanity Checker</h3>
+          <p>Enter a role and location and get a pay range from public BLS data, with a confidence note.</p>
+          <span class="badge">Apps Script · Zapier · BLS API</span>
+          <a class="card-link" href="https://github.com/HandOffTA/comp-range-sanity-checker">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Interview Scorecard Skill</h3>
+          <p>Turns a role's must-haves into a structured scorecard with clear rating anchors.</p>
+          <span class="badge">Claude Skills · Claude Code</span>
+          <a class="card-link" href="https://github.com/HandOffTA/interview-scorecard-skill">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Rejection Message Writer</h3>
+          <p>Pick the candidate's stage and a tone and get a kind, specific rejection note.</p>
+          <span class="badge">Claude API · Zapier</span>
+          <a class="card-link" href="https://github.com/HandOffTA/rejection-message-writer">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Funnel Health Dashboard</h3>
+          <p>Upload an ATS export and see time-in-stage, drop-off points, and stalled candidates.</p>
+          <span class="badge">Looker · SQL · Sheets + Apps Script</span>
+          <a class="card-link" href="https://github.com/HandOffTA/funnel-health-dashboard">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Screen Call Summarizer</h3>
+          <p>Paste call notes and get a clean candidate summary in a consistent template.</p>
+          <span class="badge">Claude API · Claude Skill</span>
+          <a class="card-link" href="https://github.com/HandOffTA/screen-call-summarizer">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Job Post Scorer</h3>
+          <p>Rates a posting for readability, jargon, and exclusionary language, and suggests fixes.</p>
+          <span class="badge">Claude API</span>
+          <a class="card-link" href="https://github.com/HandOffTA/job-post-scorer">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Hiring Manager Intake Form</h3>
+          <p>A guided form that outputs a kickoff brief and a first-pass sourcing plan.</p>
+          <span class="badge">Lovable · Forms + Apps Script · Claude API</span>
+          <a class="card-link" href="https://github.com/HandOffTA/hiring-manager-intake-form">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Offer Acceptance Risk Check</h3>
+          <p>Answer a few questions about the candidate's situation and get a risk level with talking points.</p>
+          <span class="badge">Claude API · Zapier · Lovable</span>
+          <a class="card-link" href="https://github.com/HandOffTA/offer-acceptance-risk-check">View on GitHub →</a>
+        </article>
+        <article class="card">
+          <h3>Talent Market Map</h3>
+          <p>Turns a target company list into a visual map by size, location, and hiring activity.</p>
+          <span class="badge">SQL · Looker · Power BI · Apps Script</span>
+          <a class="card-link" href="https://github.com/HandOffTA/talent-market-map">View on GitHub →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container">
+      <h2>Let's talk hiring</h2>
+      <p class="section-lead">Want a demo, have a hiring workflow that needs fixing, or just want to compare notes? Reach out.</p>
+      <ul class="contact-list">
+        <li><span class="label">Website</span><a href="http://handoffta.com">handoffta.com</a></li>
+        <li><span class="label">Email</span><a href="mailto:handoffta@proton.me">handoffta@proton.me</a></li>
+        <li><span class="label">GitHub</span><a href="https://github.com/HandOffTA">@HandOffTA</a></li>
+      </ul>
+      <p class="copyright">© 2026 HandOffTA. Less busywork. Better hiring. Hand it off.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
