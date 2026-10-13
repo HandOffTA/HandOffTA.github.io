@@ -91,6 +91,13 @@
       padding: 4px 10px; border-radius: 6px; margin-bottom: 16px;
     }
     .card-link { font-weight: 600; font-size: 0.9rem; }
+    .card-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .status {
+      align-self: flex-start; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 3px 10px; border-radius: 999px; margin-bottom: 12px;
+    }
+    .status.live { background: var(--accent-soft); color: #0a7168; }
+    .status.soon { background: #fff4e0; color: #8a5a00; }
 
     /* Footer */
     footer { background: var(--text); color: #f1f1f1; padding: 64px 0 32px; }
@@ -119,7 +126,8 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#tools">Tools</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects">Live Projects</a></li>
+        <li><a href="#in-flight">In Flight</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -185,69 +193,174 @@
 
   <section id="projects" class="alt">
     <div class="container">
-      <span class="eyebrow">Projects</span>
-      <h2>Featured work</h2>
-      <p class="section-lead">Ten tools covering the full hiring cycle, from intake and sourcing to interviews, offers, and reporting.</p>
+      <span class="eyebrow">Live Projects</span>
+      <h2>Built and ready to use</h2>
+      <p class="section-lead">Published tools you can open, install, or try right now, covering sourcing, job specs, interviews, outreach, and People Ops.</p>
       <div class="projects-grid">
         <article class="card">
-          <h3>Boolean String Builder</h3>
-          <p>Paste a job description and get LinkedIn, Google X-ray, and GitHub search strings.</p>
-          <span class="badge">Claude API · Claude Skill</span>
-          <a class="card-link" href="https://github.com/HandOffTA/boolean-string-builder">View on GitHub →</a>
+          <span class="status live">Live</span>
+          <h3>Sourcery US</h3>
+          <p>Sourcing workbench for US tech and skilled-trades recruiters: paste a JD, get platform-specific search strings, intake, string checks, and JD comparison.</p>
+          <span class="badge">HTML · JavaScript · GitHub Pages</span>
+          <div class="card-links">
+          <a class="card-link" href="https://handoffta.github.io/sourcery-us/">Try it live →</a>
+          <a class="card-link" href="https://github.com/HandOffTA/sourcery-us">View on GitHub →</a>
+          </div>
         </article>
         <article class="card">
+          <span class="status live">Live</span>
+          <h3>Talent Check-In &amp; Review</h3>
+          <p>Lightweight talent management for small People Ops teams: goals, check-ins, 1:1 prep, and calibration in a single file.</p>
+          <span class="badge">HTML · JavaScript · GitHub Pages</span>
+          <div class="card-links">
+          <a class="card-link" href="https://handoffta.github.io/talent-checkin-review/">Try it live →</a>
+          <a class="card-link" href="https://github.com/HandOffTA/talent-checkin-review">View on GitHub →</a>
+          </div>
+        </article>
+        <article class="card">
+          <span class="status live">Live</span>
+          <h3>TA Prompt Bank</h3>
+          <p>66 ready-to-run talent acquisition workflows. Describe the problem in plain language and it picks and runs the right one.</p>
+          <span class="badge">Claude Skills</span>
+          <div class="card-links">
+          <a class="card-link" href="https://github.com/HandOffTA/ta-prompt-bank">View on GitHub →</a>
+          </div>
+        </article>
+        <article class="card">
+          <span class="status live">Live</span>
+          <h3>Job Spec Auditor</h3>
+          <p>Scores a job spec out of 100, names the clauses killing the funnel, and rewrites it ready to post.</p>
+          <span class="badge">Claude Skills</span>
+          <div class="card-links">
+          <a class="card-link" href="https://github.com/HandOffTA/job-spec-auditor">View on GitHub →</a>
+          </div>
+        </article>
+        <article class="card">
+          <span class="status live">Live</span>
+          <h3>Interview Pack Builder</h3>
+          <p>Turns an intake and job spec into the full hiring bar: competencies, screen, loop plan, questions, work sample, and scorecard.</p>
+          <span class="badge">Claude Skills</span>
+          <div class="card-links">
+          <a class="card-link" href="https://github.com/HandOffTA/interview-pack-builder">View on GitHub →</a>
+          </div>
+        </article>
+        <article class="card">
+          <span class="status live">Live</span>
+          <h3>Candidate Outreach Writer</h3>
+          <p>Turns an intake transcript into candidate positioning, a LinkedIn DM, and a four-touch outreach sequence.</p>
+          <span class="badge">Claude Skills</span>
+          <div class="card-links">
+          <a class="card-link" href="https://github.com/HandOffTA/candidate-outreach-writer">View on GitHub →</a>
+          </div>
+        </article>
+        <article class="card">
+          <span class="status live">Live</span>
+          <h3>LinkedIn Profile Auditor</h3>
+          <p>Scores a LinkedIn profile out of 50 and rewrites every section around the outcome the person wants.</p>
+          <span class="badge">Claude Skills</span>
+          <div class="card-links">
+          <a class="card-link" href="https://github.com/HandOffTA/linkedin-profile-auditor">View on GitHub →</a>
+          </div>
+        </article>
+        <article class="card">
+          <span class="status live">Live</span>
+          <h3>Boolean String Builder</h3>
+          <p>Paste a job description and get LinkedIn, Google X-ray, and GitHub search strings.</p>
+          <span class="badge">Claude Skills</span>
+          <div class="card-links">
+          <a class="card-link" href="https://github.com/HandOffTA/boolean-string-builder">View on GitHub →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="in-flight">
+    <div class="container">
+      <span class="eyebrow">Projects in Flight</span>
+      <h2>In development</h2>
+      <p class="section-lead">Being built or consolidated now. Each repo has a case study of the problem and the approach.</p>
+      <div class="projects-grid">
+        <article class="card">
+          <span class="status soon">In development</span>
           <h3>Comp Range Sanity Checker</h3>
           <p>Enter a role and location and get a pay range from public BLS data, with a confidence note.</p>
           <span class="badge">Apps Script · Zapier · BLS API</span>
+          <div class="card-links">
           <a class="card-link" href="https://github.com/HandOffTA/comp-range-sanity-checker">View on GitHub →</a>
+          </div>
         </article>
         <article class="card">
+          <span class="status soon">In development</span>
           <h3>Interview Scorecard Skill</h3>
           <p>Turns a role's must-haves into a structured scorecard with clear rating anchors.</p>
           <span class="badge">Claude Skills · Claude Code</span>
+          <div class="card-links">
           <a class="card-link" href="https://github.com/HandOffTA/interview-scorecard-skill">View on GitHub →</a>
+          </div>
         </article>
         <article class="card">
+          <span class="status soon">In development</span>
           <h3>Rejection Message Writer</h3>
           <p>Pick the candidate's stage and a tone and get a kind, specific rejection note.</p>
           <span class="badge">Claude API · Zapier</span>
+          <div class="card-links">
           <a class="card-link" href="https://github.com/HandOffTA/rejection-message-writer">View on GitHub →</a>
+          </div>
         </article>
         <article class="card">
+          <span class="status soon">In development</span>
           <h3>Funnel Health Dashboard</h3>
           <p>Upload an ATS export and see time-in-stage, drop-off points, and stalled candidates.</p>
           <span class="badge">Looker · SQL · Sheets + Apps Script</span>
+          <div class="card-links">
           <a class="card-link" href="https://github.com/HandOffTA/funnel-health-dashboard">View on GitHub →</a>
+          </div>
         </article>
         <article class="card">
+          <span class="status soon">In development</span>
           <h3>Screen Call Summarizer</h3>
           <p>Paste call notes and get a clean candidate summary in a consistent template.</p>
           <span class="badge">Claude API · Claude Skill</span>
+          <div class="card-links">
           <a class="card-link" href="https://github.com/HandOffTA/screen-call-summarizer">View on GitHub →</a>
+          </div>
         </article>
         <article class="card">
+          <span class="status soon">In development</span>
           <h3>Job Post Scorer</h3>
           <p>Rates a posting for readability, jargon, and exclusionary language, and suggests fixes.</p>
           <span class="badge">Claude API</span>
+          <div class="card-links">
           <a class="card-link" href="https://github.com/HandOffTA/job-post-scorer">View on GitHub →</a>
+          </div>
         </article>
         <article class="card">
+          <span class="status soon">In development</span>
           <h3>Hiring Manager Intake Form</h3>
           <p>A guided form that outputs a kickoff brief and a first-pass sourcing plan.</p>
           <span class="badge">Lovable · Forms + Apps Script · Claude API</span>
+          <div class="card-links">
           <a class="card-link" href="https://github.com/HandOffTA/hiring-manager-intake-form">View on GitHub →</a>
+          </div>
         </article>
         <article class="card">
+          <span class="status soon">In development</span>
           <h3>Offer Acceptance Risk Check</h3>
           <p>Answer a few questions about the candidate's situation and get a risk level with talking points.</p>
           <span class="badge">Claude API · Zapier · Lovable</span>
+          <div class="card-links">
           <a class="card-link" href="https://github.com/HandOffTA/offer-acceptance-risk-check">View on GitHub →</a>
+          </div>
         </article>
         <article class="card">
+          <span class="status soon">In development</span>
           <h3>Talent Market Map</h3>
           <p>Turns a target company list into a visual map by size, location, and hiring activity.</p>
           <span class="badge">SQL · Looker · Power BI · Apps Script</span>
+          <div class="card-links">
           <a class="card-link" href="https://github.com/HandOffTA/talent-market-map">View on GitHub →</a>
+          </div>
         </article>
       </div>
     </div>
