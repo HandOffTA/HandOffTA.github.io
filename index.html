@@ -98,6 +98,8 @@
     }
     .status.live { background: var(--accent-soft); color: #0a7168; }
     .status.soon { background: #fff4e0; color: #8a5a00; }
+    .status.personal { background: #f0eeff; color: #5b21b6; }
+    .card-note { font-size: 0.9rem; font-weight: 600; color: var(--muted); }
 
     /* Footer */
     footer { background: var(--text); color: #f1f1f1; padding: 64px 0 32px; }
@@ -127,6 +129,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#tools">Tools</a></li>
         <li><a href="#projects">Live Projects</a></li>
+        <li><a href="#personal">Personal</a></li>
         <li><a href="#in-flight">In Flight</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -228,15 +231,6 @@
         </article>
         <article class="card">
           <span class="status live">Live</span>
-          <h3>Job Spec Auditor</h3>
-          <p>Scores a job spec out of 100, names the clauses killing the funnel, and rewrites it ready to post.</p>
-          <span class="badge">Claude Skills</span>
-          <div class="card-links">
-          <a class="card-link" href="https://github.com/HandOffTA/job-spec-auditor">View on GitHub →</a>
-          </div>
-        </article>
-        <article class="card">
-          <span class="status live">Live</span>
           <h3>Interview Pack Builder</h3>
           <p>Turns an intake and job spec into the full hiring bar: competencies, screen, loop plan, questions, work sample, and scorecard.</p>
           <span class="badge">Claude Skills</span>
@@ -275,12 +269,50 @@
     </div>
   </section>
 
-  <section id="in-flight">
+  <section id="personal">
+    <div class="container">
+      <span class="eyebrow">Personal Projects</span>
+      <h2>Built for me</h2>
+      <p class="section-lead">Tools I build for my own learning and thinking, outside of recruiting.</p>
+      <div class="projects-grid">
+        <article class="card">
+          <span class="status personal">Live</span>
+          <h3>Personal Curriculum Builder</h3>
+          <p>A personal learning planner. V1 live — future version adds AI course suggestions and adaptive scheduling.</p>
+          <span class="badge">HTML · JavaScript · GitHub Pages</span>
+          <div class="card-links">
+          <a class="card-link" href="https://handoffta.github.io/personal-curriculum-builder/">Try it live →</a>
+          <a class="card-link" href="https://github.com/HandOffTA/personal-curriculum-builder">View on GitHub →</a>
+          </div>
+        </article>
+        <article class="card">
+          <span class="status personal">Live</span>
+          <h3>Quiet Notes</h3>
+          <p>A private note-taking app with notebooks, tags, AI helpers, voice memos, link graph, and full backup. Built as a personal alternative to Evernote.</p>
+          <span class="badge">Web app · AI</span>
+          <div class="card-links">
+          <span class="card-note">GitHub repo coming soon</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="in-flight" class="alt">
     <div class="container">
       <span class="eyebrow">Projects in Flight</span>
       <h2>In development</h2>
       <p class="section-lead">Being built or consolidated now. Each repo has a case study of the problem and the approach.</p>
       <div class="projects-grid">
+        <article class="card">
+          <span class="status soon">In development</span>
+          <h3>Job Spec Auditor</h3>
+          <p>Scores a job spec out of 100, names the clauses killing the funnel, and rewrites it ready to post.</p>
+          <span class="badge">Claude Skills</span>
+          <div class="card-links">
+          <a class="card-link" href="https://github.com/HandOffTA/job-spec-auditor">View on GitHub →</a>
+          </div>
+        </article>
         <article class="card">
           <span class="status soon">In development</span>
           <h3>Comp Range Sanity Checker</h3>
